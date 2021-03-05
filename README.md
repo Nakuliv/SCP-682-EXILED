@@ -12,7 +12,7 @@
   # how much hp should SCP-682 get when he damage a human
   heal_hp_when_eat: 5
   # max hp
-  max_h_p: 2200
+  max_hp: 2200
   # every how many seconds SCP-682 health should regenerate?
   heal_time: 5
   # how much hp should be regenerated?
