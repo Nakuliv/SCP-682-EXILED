@@ -12,8 +12,7 @@ namespace scp_682
     {
         public bool IsEnabled { get; set; } = true;
         public int spawn_chance { get; set; } = 100;
-        public string spawn_message { get; set; } = "<b>You are <color=red>SCP-682</color></b>";
-        public ushort spawn_message_duration { get; set; } = 10;
+        public Exiled.API.Features.Broadcast spawn_message { get; private set; } = new Exiled.API.Features.Broadcast("<b>You are <color=red>SCP-682</color></b>", 10);
         [Description("is the SCP-682 supposed to kill with one bite")]
         public bool can_kill_on_oneshot { get; set; } = true;
         [Description("whether SCP-682 is to be able to Pry Gates?")]
