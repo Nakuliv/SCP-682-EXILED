@@ -45,14 +45,14 @@ namespace scp_682
                 if (scp682.Contains(ev.Target.UserId))
                 {
                     scp682.Remove(ev.Target.UserId);
-                    ev.Target.RefreshTag();
+                    ev.Target.CustomInfo = null;
                 }
             }
         }
 
         public void OnPlayerHurt(HurtingEventArgs ev)
         {
-            if (scp682.Contains(ev.Attacker.UserId) && ev.Attacker.Team != Team.SCP && ev.Target.Team != Team.SCP && ev.DamageType != DamageTypes.Nuke && ev.DamageType != DamageTypes.Wall && ev.DamageType != DamageTypes.Tesla)
+            if (scp682.Contains(ev.Attacker.UserId) && ev.Attacker.Team != Team.SCP)
             {
                 if (SCP682.Singleton.Config.can_kill_on_oneshot == true)
                 {
@@ -85,7 +85,6 @@ namespace scp_682
             {
                 ev.Player.CustomInfo = null;
                 scp682.Remove(ev.Player.UserId);
-                ev.Player.RefreshTag();
                 ev.Player.Scale = new Vector3(1, 1, 1);
                 foreach (CoroutineHandle coroutine in coroutines)
                 {

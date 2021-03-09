@@ -85,7 +85,6 @@
   <ItemGroup>
     <Compile Include="Config.cs" />
     <Compile Include="EventHandler.cs" />
-    <Compile Include="Extensions.cs" />
     <Compile Include="SCP682.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
