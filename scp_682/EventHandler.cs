@@ -83,6 +83,7 @@ namespace scp_682
             }
             else if (scp682.Contains(ev.Player.UserId))
             {
+                ev.Player.CustomInfo = null;
                 scp682.Remove(ev.Player.UserId);
                 ev.Player.RefreshTag();
                 ev.Player.Scale = new Vector3(1, 1, 1);
