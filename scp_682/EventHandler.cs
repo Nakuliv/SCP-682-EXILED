@@ -30,7 +30,7 @@ namespace scp_682
                 }
             else if (SCP682.Singleton.Config.scp682_can_destroy_door == true && scp682.Contains(ev.Player.UserId))
             {
-                int d = rnd.Next(0, 100);
+                int d = rnd.Next(0, 101);
                 if (d <= SCP682.Singleton.Config.scp682_destroy_door_chance)
                 {
                     ev.Door.BreakDoor();
@@ -52,7 +52,7 @@ namespace scp_682
 
         public void OnPlayerHurt(HurtingEventArgs ev)
         {
-            if (scp682.Contains(ev.Attacker.UserId))
+            if (scp682.Contains(ev.Attacker.UserId) && ev.Attacker.Team != Team.SCP && ev.Target.Team != Team.SCP && ev.DamageType != DamageTypes.Nuke && ev.DamageType != DamageTypes.Wall && ev.DamageType != DamageTypes.Tesla)
             {
                 if (SCP682.Singleton.Config.can_kill_on_oneshot == true)
                 {
@@ -69,7 +69,7 @@ namespace scp_682
         {
             if (ev.NewRole == RoleType.Scp93989 && !scp682.Contains(ev.Player.UserId))
             {
-                int s = rnd.Next(0, 100);
+                int s = rnd.Next(0, 101);
                 if (s <= SCP682.Singleton.Config.spawn_chance)
                 {
                     ev.Player.MaxHealth = SCP682.Singleton.Config.MaxHP;
