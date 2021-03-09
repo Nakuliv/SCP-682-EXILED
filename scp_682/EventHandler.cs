@@ -74,7 +74,7 @@ namespace scp_682
                 {
                     ev.Player.MaxHealth = SCP682.Singleton.Config.MaxHP;
                     ev.Player.Health = SCP682.Singleton.Config.MaxHP;
-                    ev.Player.Broadcast(SCP682.Singleton.Config.spawn_message_duration, SCP682.Singleton.Config.spawn_message);
+                    ev.Player.Broadcast(SCP682.Singleton.Config.spawn_message.Duration  , SCP682.Singleton.Config.spawn_message.Content);
                     ev.Player.Scale = new Vector3(1.30f, 1, 1.50f);
                     ev.Player.CustomInfo = "<color=red>SCP-682</color>";
                     scp682.Add(ev.Player.UserId);
