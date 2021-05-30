@@ -22,7 +22,7 @@ he spawn as increased 939-89 with a configurable amount of hp.
   is_enabled: true
   spawn_chance: 100
   spawn_message: <b>You are <color=red>SCP-682</color></b>
-  spawn_message_duration: 10
+  spawn_message_duration: 15
   # is the SCP-682 supposed to kill with one bite
   can_kill_on_oneshot: true
   # whether SCP-682 is to be able to Pry Gates?
